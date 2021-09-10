@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'admin-product-stock',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/admin-product-stock.git',
     '__license' => 'MIT',
     '__author' => [
@@ -35,6 +35,17 @@ return [
                     'label' => 'Stock',
                     'type' => 'number',
                     'position' => 'left-bottom-right-left',
+                    'rules' => [
+                        'numeric' => [
+                            'min' => 0
+                        ]
+                    ]
+                ]
+            ],
+            'admin.product-variant.edit' => [
+                'stock' => [
+                    'label' => 'Stock',
+                    'type' => 'number',
                     'rules' => [
                         'numeric' => [
                             'min' => 0
